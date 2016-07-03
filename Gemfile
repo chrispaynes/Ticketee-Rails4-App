@@ -42,6 +42,8 @@ end
 group :test do
   # Integration testing tool for rack based web applications. It simulates how a user would interact with a website
   gem "capybara", "~> 2.4"
+  # Framework and DSL for defining and using factories - less error-prone, more explicit, and all-around easier to work with than fixtures.
+  gem "factory_girl_rails", "~> 4.5"
 end
 
 group :development do
