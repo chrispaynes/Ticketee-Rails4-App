@@ -1,0 +1,12 @@
+<div id="ticket">
+  <header>
+    <h1><%= @project.name %></h1>
+  </header>
+
+  <header>
+    <h2><%= @ticket.name %></h2>
+  </header>
+
+  <!-- converts line breaks entered in the description field into HTML <br> tags -->
+  <%= simple_format(@ticket.description) %>
+</div>
