@@ -15,7 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-rails', '~> 4.3'
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form', '~> 3.1.0'
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 3.5.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
