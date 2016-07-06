@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   namespace :admin do
     root "application#index"
+
+    resources :projects, only: [:new, :create, :destroy]
   end
 
   devise_for :users
   root "projects#index"
 
-  resources :projects do
+  # whitelists specific RESTful routes that should be generated
+  resources :projects, only: [:index, :show, :edit, :update] do
     resources :tickets
   end
   # The priority is based upon order of creation: first created -> highest priority.
