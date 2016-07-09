@@ -30,15 +30,11 @@ RSpec.feature "Users can only see the appropriate links" do
     end
   end
 
-  context "anonymous users" do
-    scenario "cannot see the Delete Project Link" do
-      visit project_path(project)
-      expect(page).not_to have_link "Delete Project"
-    end
-  end
-
-  context "regular users" do
-    before { login_as(user) }
+  context "non-admin users (project viewers)" do
+    before do 
+      login_as(user)
+      assign_role!(user, :viewer, project)
+    end 
 
     scenario "cannot see the Delete Project Link" do
       visit project_path(project)
