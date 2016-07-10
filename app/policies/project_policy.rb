@@ -10,13 +10,13 @@ class ProjectPolicy < ApplicationPolicy
     end
   end
 
-  # authorizes admins and signed in users to view a project
+  # authorizes admins and specific user roles to perform controller actions 
+  
   def show?
-    user.try(:admin?) || record.roles.exists?(user_id: user)
+    user.try(:admin?) || record.has_member?(user) 
   end
 
-  # authorizes admins and managers to update a project
   def update?
-    user.try(:admin?) || record.roles.exists?(user_id: user, role: "manager")
+    user.try(:admin?) || record.has_manager?(user) 
   end
 end
