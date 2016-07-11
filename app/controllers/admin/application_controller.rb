@@ -1,4 +1,7 @@
 class Admin::ApplicationController < ApplicationController
+  # Bypasses Pundit's authorization and policy scoping checks
+  skip_after_action :verify_authorized, :verify_policy_scoped
+
   before_action :authorize_admin!
   
   def index
