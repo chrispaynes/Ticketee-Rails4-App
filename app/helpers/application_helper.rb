@@ -1,4 +1,16 @@
 module ApplicationHelper
+
+  # defines a list of roles and creates titleized version for dropdown menu
+  def roles
+    hash = {}
+    
+    Role.available_roles.each do |role|
+      hash[role.titleize] = role
+    end
+
+    hash
+  end
+
   def title(*parts)
     unless parts.empty?
       content_for :title do 
