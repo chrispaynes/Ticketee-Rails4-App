@@ -21,6 +21,8 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.5.6'
 # Object oriented authorization for Rails applications
 gem 'pundit', '~> 0.3.0'
+# Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends.
+gem 'carrierwave', '~> 0.10.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
