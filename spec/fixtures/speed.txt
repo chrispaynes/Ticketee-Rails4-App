@@ -1,1 +1,1 @@
-Dummy speed text filler
+The blink tag can blink faster

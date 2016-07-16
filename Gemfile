@@ -27,7 +27,8 @@ gem 'carrierwave', '~> 0.10.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# Turbolinks may cause problems when using JavaScript within the app
+#gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -54,6 +55,9 @@ group :test do
   gem "capybara", "~> 2.4"
   # Framework and DSL for defining and using factories - less error-prone, more explicit, and all-around easier to work with than fixtures.
   gem "factory_girl_rails", "~> 4.5"
+  # WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application.
+  gem "selenium-webdriver", "~> 2.53.4"
+  gem "database_cleaner", "~> 1.4"
 end
 
 group :development do
