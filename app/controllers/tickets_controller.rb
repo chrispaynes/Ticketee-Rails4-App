@@ -24,6 +24,7 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
   def show
     authorize @ticket, :show?
+    @comment = @ticket.comments.build
   end
 
   def edit

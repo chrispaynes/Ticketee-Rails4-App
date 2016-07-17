@@ -17,6 +17,11 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :show, :edit, :update] do
     resources :tickets
   end
+
+  resources :tickets, only: [] do
+    resources :comments, only: [:create]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -71,7 +76,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
+
   # routes attachment requests to the correct controller
   # the only action/route is the :show action
   resources :attachments, only: [:show, :new]
