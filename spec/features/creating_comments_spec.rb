@@ -16,7 +16,7 @@ RSpec.feature "Users can comment on tickets" do
     fill_in "Text", with: "Added a comment!"
     click_button "Create Comment"
 
-    expect(page).to have_content "Command has been created."
+    expect(page).to have_content "Comment has been created."
     within("#comments") do
       expect(page).to have_content "Added a comment!"
     end
