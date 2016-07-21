@@ -9,6 +9,7 @@ class Comment < ActiveRecord::Base
   delegate :project, to: :ticket
 
   scope :persisted, lambda { where.not(id: nil) }
+  
   before_create :set_previous_state
   after_create :set_ticket_state
 
