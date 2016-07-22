@@ -52,4 +52,5 @@ RSpec.configure do |config|
   # allows Warden to use feature specs and reset itself after each use
   config.include Warden::Test::Helpers, type: :feature
   config.after(type: :feature) { Warden.test_reset! }
+  config.include Devise::TestHelpers, type: :controller
 end
