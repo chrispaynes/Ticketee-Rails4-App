@@ -15,7 +15,7 @@ RSpec.feature "Users can delete unwanted tags from a ticket" do
   end
 
   scenario "successfully", js: true do
-    within_tag("ThisTagMustDie") do
+    within tag("ThisTagMustDie") do
       click_link "remove"
     end
     expect(page).to_not have_content "ThisTagMustDie"
