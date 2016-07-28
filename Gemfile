@@ -23,6 +23,8 @@ gem 'devise', '~> 3.5.6'
 gem 'pundit', '~> 0.3.0'
 # Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends.
 gem 'carrierwave', '~> 0.10.0'
+# Label-based straight-SQL searcher
+gem "searcher", github: "radar/searcher"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
