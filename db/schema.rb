@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160723005052) do
+ActiveRecord::Schema.define(version: 20160729020903) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "file"
@@ -55,8 +55,9 @@ ActiveRecord::Schema.define(version: 20160723005052) do
   add_index "roles", ["user_id"], name: "index_roles_on_user_id"
 
   create_table "states", force: :cascade do |t|
-    t.string "name"
-    t.string "color"
+    t.string  "name"
+    t.string  "color"
+    t.boolean "default", default: false
   end
 
   create_table "tags", force: :cascade do |t|
