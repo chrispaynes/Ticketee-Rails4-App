@@ -60,6 +60,7 @@ group :test do
   # WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application.
   gem "selenium-webdriver", "~> 2.53.4"
   gem "database_cleaner", "~> 1.4"
+  gem "email_spec", "~> 1.6.0"
 end
 
 group :development do
